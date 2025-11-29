@@ -36,7 +36,7 @@ export default function HeroSection() {
                                     preset="fade-in-blur"
                                     speedSegment={0.3}
                                     as="h1"
-                                    className="mt-8 max-w-1xl text-balance text-5xl font-medium md:text-6xl lg:mt-16">
+                                    className="mt-8 max-w-1xl text-balance text-3xl font-medium md:text-5xl lg:mt-16">
                                     Hi there, I'm Faiz Fazdlih.
                                 </TextEffect>
                                 
@@ -68,7 +68,7 @@ export default function HeroSection() {
                                 <div className="w-full animate-fade-in-blur" style={{ animationDelay: '0.8s', animationFillMode: 'both' }}>
                                     <div className="relative w-full h-[180px] sm:h-[220px] md:h-[260px] lg:h-[300px]">
                                         <Image
-                                            src="/soyoung.jpg"
+                                            src="/vibe.png"
                                             alt="Hero image"
                                             fill
                                             className="rounded-lg shadow-lg object-cover"
@@ -78,12 +78,12 @@ export default function HeroSection() {
                                 </div>
 
                                 <div
-                                    className="animate-fade-in-blur"
+                                    className="flex gap-4 animate-fade-in-blur"
                                     style={{ animationDelay: "1s", animationFillMode: "both" }}
                                 >
                                     <Dialog>
                                         <DialogTrigger asChild>
-                                            <Button>Hire Me</Button>
+                                            <Button className="w-23">Hire Me</Button>
                                         </DialogTrigger>
                                         <DialogContent className="sm:max-w-[500px]">
                                             <DialogHeader>
@@ -115,16 +115,15 @@ export default function HeroSection() {
                                                             rows={4}
                                                             className="resize-none"
                                                         />
-                                                    </div>
-                                                </div>
-                                                <div className="py-4">
-                                                    <DialogFooter>
                                                         <Button type="submit">Send Message</Button>
-                                                    </DialogFooter>
+                                                    </div>
                                                 </div>
                                             </form>
                                         </DialogContent>
                                     </Dialog>
+                                    <Button variant="ghost" className="flex-1 sm:flex-none" asChild>
+                                        <Link href="#projects">Get to Know Me</Link>
+                                    </Button>
                                 </div>
                             </div>
                         </div>

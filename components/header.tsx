@@ -16,6 +16,7 @@ import {
 import { ArrowUpRight } from 'lucide-react';
   
 const menuItems = [
+    { name: 'Home', href: '#link' },
     { name: 'Projects', href: '#link' },
     { name: 'About', href: '#link' },
     { name: 'Resume', href: '#link' },
