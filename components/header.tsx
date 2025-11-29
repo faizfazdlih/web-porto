@@ -16,7 +16,6 @@ import {
 import { ArrowUpRight } from 'lucide-react';
   
 const menuItems = [
-    { name: 'Home', href: '#link' },
     { name: 'Projects', href: '#link' },
     { name: 'About', href: '#link' },
     { name: 'Resume', href: '#link' },
@@ -47,7 +46,7 @@ export const HeroHeader = () => {
             <nav
                 data-state={menuState && 'active'}
                 className="fixed z-20 w-full px-2">
-                <div className={cn('mx-auto mt-2 max-w-6xl px-6 transition-all duration-300 lg:px-12', isScrolled && 'bg-background/50 max-w-4xl rounded-lg border backdrop-blur-lg lg:px-5')}>
+                <div className={cn('mx-auto mt-2 max-w-6xl px-6 transition-all duration-300 lg:px-12', isScrolled && 'bg-background/50 max-w-5xl rounded-lg border backdrop-blur-lg lg:px-4')}>
                     <div className="relative flex flex-wrap items-center justify-between gap-6 py-1.5 lg:py-2">
                         <div className="flex w-full justify-between lg:w-auto">
                         <TooltipProvider>
@@ -80,7 +79,7 @@ export const HeroHeader = () => {
                                     <li key={index}>
                                         <Link
                                             href={item.href}
-                                            className="flex items-center text-muted-foreground font-semibold hover:text-accent-foreground hover:underline underline-offset-4 decoration-2 block duration-150">
+                                            className="flex items-center text-muted-foreground font-bold hover:text-accent-foreground hover:underline underline-offset-4 decoration-2 block duration-150">
                                             <span>{item.name}</span>
                                             <ArrowUpRight className="ml-1 size-4" />
                                         </Link>
@@ -89,7 +88,7 @@ export const HeroHeader = () => {
                             </ul>
                         </div>
 
-                        <div className="bg-background in-data-[state=active]:block lg:in-data-[state=active]:flex mb-6 hidden w-full flex-wrap items-center justify-end space-y-8 rounded-3xl border p-6 shadow-2xl shadow-zinc-300/20 md:flex-nowrap lg:m-0 lg:flex lg:w-fit lg:gap-6 lg:space-y-0 lg:border-transparent lg:bg-transparent lg:p-0 lg:shadow-none dark:shadow-none dark:lg:bg-transparent">
+                        <div className="bg-background in-data-[state=active]:block lg:in-data-[state=active]:flex mb-6 hidden w-full flex-wrap items-center justify-end space-y-8 rounded-2xl border p-6 shadow-2xl shadow-zinc-300/20 md:flex-nowrap lg:m-0 lg:flex lg:w-fit lg:gap-6 lg:space-y-0 lg:border-transparent lg:bg-transparent lg:p-0 lg:shadow-none dark:shadow-none dark:lg:bg-transparent">
                             <div className="lg:hidden">
                                 <ul className="space-y-6 text-base">
                                     {menuItems.map((item, index) => (
@@ -108,7 +107,7 @@ export const HeroHeader = () => {
                                 <Button
                                     asChild
                                     size="sm"
-                                    className={cn(isScrolled && 'lg:hidden')}>
+                                    className={cn(isScrolled && 'lg:hidden', '!font-semibold')}>
                                     <Link href="#">
                                         <span>Book a Call</span>
                                     </Link>
@@ -116,7 +115,7 @@ export const HeroHeader = () => {
                                 <Button
                                     asChild
                                     size="sm"
-                                    className={cn(isScrolled ? 'lg:inline-flex' : 'hidden')}>
+                                    className={cn(isScrolled ? 'lg:inline-flex' : 'hidden', '!font-semibold')}>
                                     <Link href="#">
                                         <span>Book a Call</span>
                                     </Link>
