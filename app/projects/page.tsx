@@ -5,6 +5,14 @@ import Image from 'next/image'
 import Link from 'next/link'
 import FooterSection from "@/components/footer";
 import { ArrowUpRight } from 'lucide-react'
+import {
+    Breadcrumb,
+    BreadcrumbItem,
+    BreadcrumbLink,
+    BreadcrumbList,
+    BreadcrumbPage,
+    BreadcrumbSeparator,
+} from "@/components/ui/breadcrumb"
 import { getAllProjects } from '@/lib/projects-data'
 import { HeroHeader } from '@/components/header'
 import { FadeIn, FadeInStagger, FadeInStaggerItem } from '@/components/fade-in'
@@ -19,6 +27,22 @@ export default function ProjectsPage() {
                 <div className="relative py-24 pt-32">
                     <div className="absolute inset-0 -z-10 size-full [background:radial-gradient(125%_125%_at_50%_100%,transparent_0%,var(--color-background)_75%)]"></div>
                     <div className="mx-auto max-w-5xl px-6">
+                        <FadeIn delay={0.05}>
+                            <Breadcrumb className="mb-8">
+                                <BreadcrumbList>
+                                    <BreadcrumbItem>
+                                        <BreadcrumbLink asChild>
+                                            <Link href="/">Home</Link>
+                                        </BreadcrumbLink>
+                                    </BreadcrumbItem>
+                                    <BreadcrumbSeparator />
+                                    <BreadcrumbItem>
+                                        <BreadcrumbPage>Projects</BreadcrumbPage>
+                                    </BreadcrumbItem>
+                                </BreadcrumbList>
+                            </Breadcrumb>
+                        </FadeIn>
+
                         <div className="mb-12">
                             <FadeIn delay={0.1}>
                                 <h1 className="text-5xl font-bold mb-4">All Projects</h1>

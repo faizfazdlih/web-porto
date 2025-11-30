@@ -7,6 +7,14 @@ import FooterSection from '@/components/footer'
 import { notFound } from 'next/navigation'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
+import {
+    Breadcrumb,
+    BreadcrumbItem,
+    BreadcrumbLink,
+    BreadcrumbList,
+    BreadcrumbPage,
+    BreadcrumbSeparator,
+} from "@/components/ui/breadcrumb"
 import { ExternalLink, Github, Check, ArrowLeft } from 'lucide-react'
 import { getProjectBySlug, getAllProjects } from '@/lib/projects-data'
 import { HeroHeader } from '@/components/header'
@@ -33,6 +41,28 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                 <div className="relative py-24 pt-32">
                     <div className="absolute inset-0 -z-10 size-full [background:radial-gradient(125%_125%_at_50%_100%,transparent_0%,var(--color-background)_75%)]"></div>
                     <div className="mx-auto max-w-5xl px-6">
+                        <FadeIn delay={0.05}>
+                            <Breadcrumb className="mb-8">
+                                <BreadcrumbList>
+                                    <BreadcrumbItem>
+                                        <BreadcrumbLink asChild>
+                                            <Link href="/">Home</Link>
+                                        </BreadcrumbLink>
+                                    </BreadcrumbItem>
+                                    <BreadcrumbSeparator />
+                                    <BreadcrumbItem>
+                                        <BreadcrumbLink asChild>
+                                            <Link href="/projects">Projects</Link>
+                                        </BreadcrumbLink>
+                                    </BreadcrumbItem>
+                                    <BreadcrumbSeparator />
+                                    <BreadcrumbItem>
+                                        <BreadcrumbPage>{project.title}</BreadcrumbPage>
+                                    </BreadcrumbItem>
+                                </BreadcrumbList>
+                            </Breadcrumb>
+                        </FadeIn>
+
                         <div className="mb-12">
                             <FadeIn delay={0.1}>
                                 <div className="flex items-start justify-between mb-4">
