@@ -1,4 +1,5 @@
 'use client'
+
 import Link from 'next/link'
 import { Menu, X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
@@ -16,8 +17,8 @@ import {
 import { ArrowUpRight } from 'lucide-react';
   
 const menuItems = [
-    { name: 'Home', href: '#link' },
-    { name: 'Projects', href: '#link' },
+    { name: 'Home', href: '/' },
+    { name: 'Projects', href: '/projects' },
     { name: 'About', href: '#link' },
     { name: 'Resume', href: '#link' },
 ]
