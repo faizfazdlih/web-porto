@@ -25,7 +25,6 @@ export default function ProjectsPage() {
             <HeroHeader />
             <main className="overflow-hidden min-h-screen">
                 <div className="relative py-24 pt-32">
-                    <div className="absolute inset-0 -z-10 size-full [background:radial-gradient(125%_125%_at_50%_100%,transparent_0%,var(--color-background)_75%)]"></div>
                     <div className="mx-auto max-w-5xl px-6">
                         <FadeIn delay={0.05}>
                             <Breadcrumb className="mb-8">

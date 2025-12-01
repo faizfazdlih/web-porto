@@ -99,7 +99,6 @@ export default function DarkVeil({
 	const { resolvedTheme } = useTheme()
 	const [mounted, setMounted] = useState(false)
 
-	// Ensure component is mounted before checking theme
 	useEffect(() => {
 		setMounted(true)
 	}, [])
@@ -173,7 +172,6 @@ export default function DarkVeil({
 		resolutionScale,
 	])
 
-	// Only check theme after component is mounted to avoid hydration mismatch
 	const isLight = mounted && resolvedTheme === "light"
 
 	return (
